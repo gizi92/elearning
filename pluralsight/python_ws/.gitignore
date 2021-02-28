@@ -1,3 +1,4 @@
+# =============== Python ====================
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -136,3 +137,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+# =============== Vagrant ====================
+# General
+.vagrant/
+
+# Log files (if you are creating logs in debug mode, uncomment this)
+# *.log

@@ -1,0 +1,25 @@
+# Tryout: create for every workspace the intended environment, if possible
+Vagrant.configure("2") do |config|
+  # install required plugins
+  config.vagrant.plugins = ["vagrant-reload", "vagrant-disksize"]
+  
+  config.vm.define "pyvm" do |pyvm|
+    pyvm.vm.box = "ubuntu/focal64"
+    pyvm.vm.hostname = "python-vm-focal64"
+    pyvm.vm.network "public_network", type: "dhcp"
+    pyvm.vm.synced_folder "./data", "/vagrant_data"
+    pyvm.vm.provider "virtualbox" do |vb|
+          vb.name = "python-dev-vm"
+          vb.gui = false
+          vb.memory = "1024"
+          vb.cpus = 1
+      end
+    pyvm.vm.provision "shell", inline: <<-SHELL
+      apt update
+      apt upgrade -y
+      apt install -y python-is-python3 python3-pip
+    SHELL
+    pyvm.vm.provision :reload
+    #pyvm.vm.provision "shell", path: "./provisioning/master/prov.sh"
+  end
+end
