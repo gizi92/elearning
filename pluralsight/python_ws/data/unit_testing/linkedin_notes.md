@@ -43,13 +43,14 @@
 > - Collaborated with Erich Gamma to implement the first Java unit testing framework JUnit.
 > - JUnit has been the basis for many other xUnit testing frameworks written for other languages.
 
-## TDD Workflow: <span style="color:red">RED</span>, <span style="color:green">GREEN</span>, REFACTOR
+## TDD Workflow: RED, GREEN, REFACTOR
+TDD has the following phases in its workflow:
+- Write a failing unit test (the RED phase)
+- Write just enough production code to make that test pass (the GREEN phase)
+- Refactor the unit test and the production code to make it clean (the REFACTOR phase).
+- Repeat until the feature is complete
 
-!!MERMAID TEST!!
-```mermaid
-graph TD;
-A-->B;
-A-->C;
-B-->D;
-C-->D;
-```
+## Uncle Bob's 3 laws of TDD
+- You may not write any production code until you have written a failing unit test.
+- You may not write more of a unit test than is sufficient to fail, and not compiling is failing.
+- You may not write more production code than is sufficient to pass the currently failing unit test.
