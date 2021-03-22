@@ -74,4 +74,20 @@
 - If passing tests - deploys to manual testing environment
 
 [Continuous Integration](https://www.martinfowler.com/articles/continuousIntegration.html)
+* * *
+## Unit Testing with the **pytest** module
+Summary:
+- Definding test cases with `pytest`
+- Interpreting test failures
+- Test Fixtures
+- Organising test code
 
+> History:
+> - `unittest` is based on **JUnit**
+> - **JUnit** was created by Erich Gamma and Kent Beck in 1997
+> - unittest first came out in 2001 in python 2.1, as a port of **JUnit** (xUnit frameworks)
+
+Pytest:
+- `pytest` is a popular alternative to `unittest`
+- it is not a member of the **xUnit** family
+- It's not included int the standard python distribution
