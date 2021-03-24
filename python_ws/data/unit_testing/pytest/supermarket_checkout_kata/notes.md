@@ -12,7 +12,7 @@
 - [x] Can add an item price
 - [x] Can add an item
 - [x] Can calculate the current total
-- [ ] Can add multiple items and get correct total
-- [ ] Can add discount rules
-- [ ] Can apply discount rules to the total
-- [ ] Exception is thrown for item added without a price
+- [x] Can add multiple items and get correct total
+- [x] Can add discount rules
+- [x] Can apply discount rules to the total
+- [x] Exception is thrown for item added without a price
