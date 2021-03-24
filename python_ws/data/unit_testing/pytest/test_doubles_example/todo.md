@@ -1,0 +1,3 @@
+- [x] Can call readFromFile
+- [x] readFromFile returns correct string
+- [x] readFromFile throws exception when file doesn't exist
