@@ -15,7 +15,7 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 # Connecting the library, specify where to get the header files
-include_directories("../libcalculator")
+include_directories("../calculator")
 
 add_executable(
   test_calculator
@@ -23,7 +23,7 @@ add_executable(
 )
 target_link_libraries(
   test_calculator
-  libcalculator
+  calculator
   gtest_main
 )
 
