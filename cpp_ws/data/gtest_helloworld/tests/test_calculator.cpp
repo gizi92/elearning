@@ -7,5 +7,5 @@ TEST(CalculatorTests, AddTwoIntegers) {
 }
 
 TEST(CalculatorTests, MultiplyTwoIntegers) {
-  EXPECT_EQ(mul(3,2), 16);
+  EXPECT_EQ(mul(3,2), 6);
 }
