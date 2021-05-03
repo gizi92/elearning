@@ -33,6 +33,6 @@ Test(QueueTests, EnqueueElementsInFullQueue)
 }
 
 Test(QueueTests, DequeueElementsFromEmptyQueue)
-{
-    cr_expect(q_dequeue(q) != QUEUE_EMPTY, "Expected q_dequeue to fail.");  
+{ 
+    cr_expect(q_dequeue(q) == QUEUE_EMPTY, "Expected q_dequeue to pass.");  
 }

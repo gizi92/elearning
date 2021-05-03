@@ -4,7 +4,7 @@
 # Dev VM for C and CPP development on linux
 Vagrant.configure("2") do |config|
   config.vm.define "cpp-vm" do |cppvm|
-    cppvm.vm.box = "ubuntu/bionic64" # trouble with installing criterion-dev on focal64
+    cppvm.vm.box = "ubuntu/focal64"
     cppvm.vm.box_check_update = true
     cppvm.vm.network "public_network", type: "dhcp"
     cppvm.vm.synced_folder "./data", "/vagrant_data"
@@ -14,11 +14,6 @@ Vagrant.configure("2") do |config|
       vb.memory = "2048"
       vb.cpus = 2
     end
-    cppvm.vm.provision "shell", inline: <<-SHELL
-      apt-add-repository ppa:snaipewastaken/ppa
-      apt-get update
-      apt-get upgrade -y
-      apt-get install -y build-essential gdb cmake zip unzip criterion-dev
-    SHELL
+    cppvm.vm.provision "shell", path: "./provisioning/dev_prov.sh"
   end  
 end
