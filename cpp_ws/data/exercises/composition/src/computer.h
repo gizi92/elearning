@@ -1,7 +1,7 @@
-#ifndef _COMPUTER_H
-#define _COMPUTER_H
-#include <iostream>
+#pragma once
 
+#include <iostream>
+//TODO Split mega computer header into smaller ones for classes
 class IPrinter
 {
     public:
@@ -34,5 +34,3 @@ class LinuxPrinter: public IPrinter
         std::string print_to_console(const char* input);
         ~LinuxPrinter();
 };
-
-#endif /* _COMPUTER_H */

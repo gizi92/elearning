@@ -11,6 +11,7 @@ class ComputerFixture: public ::testing::Test
     void SetUp()
     {
       m_test_input = "Test Console Output";
+      //todo handle platform specific flags and object creations in ctor
       #ifdef __linux__
         m_printer = new LinuxPrinter;
       #else
