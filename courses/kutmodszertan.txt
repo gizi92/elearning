@@ -1,0 +1,17 @@
+Gizinek 4.1, 4.2
+
+a couple of VM for machine learning. www.fast.ai
+
+a couple of VM-s with much CPU and RAM pover,
+zenestudio a hangfelvetelekhez. sima studio
+
+datasetnek data server pl amazon bucket 4 terrabyte
+
+
+1 cloud architect
+1 devops engineering
+2 machine learning engineering
+1 generalist programmer
+1 data scientist
+1 project manager
+1 security specialist
