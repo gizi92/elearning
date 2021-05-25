@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16.3)
 set(This test_computer)
 project(${This})
 
-set(src_files "test_computer.cpp")
+file(GLOB src_files ${PROJECT_SOURCE_DIR}/*.cpp)
 
 # GoogleTest requires at least C++11
 set(CMAKE_CXX_STANDARD 11)

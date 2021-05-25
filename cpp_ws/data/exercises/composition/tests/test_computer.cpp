@@ -1,5 +1,7 @@
 #include <gtest/gtest.h>
 #include "../src/computer.h"
+#include "../src/windows/windows_printer.h"
+#include "../src/linux/linux_printer.h"
 
 class ComputerFixture: public ::testing::Test
 {

@@ -1,5 +1,7 @@
 #include <iostream>
 #include "src/computer.h"
+#include "src/linux/linux_printer.h"
+#include "src/windows/windows_printer.h"
 
 #ifdef __linux__
     Computer c(new LinuxPrinter);
