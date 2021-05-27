@@ -16,5 +16,5 @@ std::string WindowsPrinter::print_to_console(const char* input)
 
 WindowsPrinter::~WindowsPrinter()
 {
-    //   
+    //
 }

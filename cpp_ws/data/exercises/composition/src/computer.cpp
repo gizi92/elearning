@@ -1,3 +1,4 @@
+#include <iostream>
 #include "computer.h"
 
 Computer::Computer(IPrinter *printer)
@@ -12,6 +13,9 @@ void Computer::print_to_console(const char* input)
 
 Computer::~Computer()
 {
-    //TODO release resources
-    //TODO make sure base class is deleted
+    std::cout << "computer destructor" << std::endl;
+    //Q: release resources done right?
+    delete m_printer;
 }
+
+// relation between "is a" and "has a"
