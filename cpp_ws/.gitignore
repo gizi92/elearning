@@ -466,6 +466,9 @@ FodyWeavers.xsd
 # JetBrains Rider
 .idea/
 *.sln.iml
+# misc from Gizi
+*.tcl
+
 
 # =============== Vagrant ====================
 # General
