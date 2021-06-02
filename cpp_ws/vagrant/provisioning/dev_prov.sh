@@ -12,3 +12,8 @@ apt-get upgrade -y
 apt-get install -y build-essential gdb cmake zip unzip git
 # install Criterion Framework
 apt-get install -y criterion-dev
+
+# Setup git workspace
+git config --global user.name "gizi92"
+git config --global user.email "simonzsolt0308@gmail.com"
+mkdir -p /home/vagrant/dev/git
