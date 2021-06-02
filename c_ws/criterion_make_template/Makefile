@@ -16,7 +16,7 @@ TFLAGS = --verbose
 LIBDIR = ./lib
 LIB = $(LIBDIR)/myqueue.a
 
-all: $(LIB)
+all: $(OBJDIR) $(LIBDIR) $(LIB)
 
 release: CFLAGS=-Wall -O2 -DNDEBUG 
 release: clean
