@@ -7,8 +7,7 @@ SRCS=$(wildcard $(SRCDIR)/*.c)
 OBJS=$(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
 
 BINDIR = ./bin
-BIN = $(BINDIR)/queuetest
-SUBMITNAME = myproject.zip
+BIN = $(BINDIR)/trie_example
 
 all: $(BINDIR) $(OBJDIR) $(BIN)
 
@@ -33,7 +32,3 @@ $(BINDIR):
 
 clean:
 	$(RM) -r $(BINDIR)/* $(OBJDIR)/*
-
-submit:
-	$(RM) $(SUBMITNAME)
-	zip $(SUBMITNAME) $(BIN)
