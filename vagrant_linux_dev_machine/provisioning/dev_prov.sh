@@ -6,12 +6,14 @@
 touch /etc/apt/sources.list.d/snaipewastaken-ubuntu-ppa-focal.list
 echo "deb [trusted=yes] http://ppa.launchpad.net/snaipewastaken/ppa/ubuntu bionic main" | tee -a /etc/apt/sources.list.d/snaipewastaken-ubuntu-ppa-bionic.list
 
-apt-get update
-apt-get upgrade -y
-# install dev tools
-apt-get install -y build-essential gdb cmake zip unzip git
+apt update
+apt upgrade -y
+# install dev tools, C/C++ stuff
+apt install -y build-essential gdb cmake zip unzip git
 # install Criterion Framework
-apt-get install -y criterion-dev
+apt install -y criterion-dev
+# python stuff
+apt install -y python-is-python3 ipython3 python3-pip dos2unix
 
 # Setup git workspace
 git config --global user.name "gizi92"

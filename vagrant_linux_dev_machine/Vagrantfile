@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Dev VM for C and CPP development on linux
+Vagrant.configure("2") do |config|
+  config.vm.define "cpp-vm" do |cppvm|
+    cppvm.vm.box = "ubuntu/focal64"
+    cppvm.vm.box_check_update = true
+    cppvm.vm.network "public_network", type: "dhcp"
+    cppvm.vm.synced_folder "./shared", "/vagrant_data"
+    cppvm.vm.provider "virtualbox" do |vb|
+      vb.name = "cpp-dev-vm"
+      # vb.gui = true
+      vb.memory = "2048"
+      vb.cpus = 2
+    end
+    cppvm.vm.provision "shell", path: "./provisioning/dev_prov.sh"
+  end  
+end
