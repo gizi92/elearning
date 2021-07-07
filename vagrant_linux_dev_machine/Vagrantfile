@@ -7,6 +7,7 @@ Vagrant.configure("2") do |config|
     cppvm.vm.box = "ubuntu/focal64"
     cppvm.vm.box_check_update = true
     cppvm.vm.network "public_network", type: "dhcp"
+    cppvm.vm.network "forwarded_port",  guest: 80, host: 8080
     cppvm.vm.synced_folder "./shared", "/vagrant_data"
     cppvm.vm.provider "virtualbox" do |vb|
       vb.name = "cpp-dev-vm"
