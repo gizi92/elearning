@@ -13,7 +13,7 @@ apt install -y build-essential gdb cmake zip unzip git
 # install Criterion Framework
 apt install -y criterion-dev
 # python stuff
-apt install -y python-is-python3 ipython3 python3-pip dos2unix
+apt install -y python-is-python3 ipython3 python3-pip python3.8-venv dos2unix
 
 # Setup git workspace
 git config --global user.name "gizi92"
