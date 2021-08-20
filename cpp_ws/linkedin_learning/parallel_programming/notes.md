@@ -51,3 +51,58 @@ Memory Speed < Processor Speed
 # Threads vs Processes
 - Are "lightweight - require less overhead to create and terminate
 - Operating systems can switch between threads faster than processes
+
+# Concurrency vs parallel execution
+
+> **Concurrency**: Ability of a program to be broken into  parts that
+can run independently of each other
+
+## Example:
+Salad recipe:
+1. Chop lettuce.
+2. Chop cucumbers.
+3. Chop tomatoes.
+4. Chop onions.
+5. Mix vegetables.
+6. Add dressing.
+
+Tasks 1-4 are concurrent, since the order of their execution is independent from each other.
+
+> **Concurrent execution**: Concurrent tasks using a single processor. 
+In this case the tasks are using the resource concurently and 
+the time of execution is the sum of performing each task individually. 
+It is not true parallel execution. Useful for I/O dependent tasks, for ex. device drivers.
+
+> **Parallel Hardware**: Multi-Core processors, Graphics Processing Units, Computer Cluster
+
+> **Parallel execution**: Execute tasks in parallel on different processors. Useful for ex. large math
+operations, which can be divided into independent sub-parts.
+
+# Execution scheduling
+> **Scheduler**: Operating system function that assigns processes
+and threads to run on available CPUs
+
+> **Context Switch**:
+> - Storing the state of a process or thread to resume later
+> - Loading the saved state for the new process or thread to run
+
+> **Scheduling Algorithms**:
+> - First come, first  served
+> - Shortest job next
+> - Priority
+> - Shortest remaining time
+> - Round-robin
+> - Multiple-level queues
+
+> **Scheduling Goals**:
+> - Maximize throughput
+> - Maximize fairness
+> - Minimize wait time
+> - Minimize latency
+
+```mermaid
+stateDiagram-v2
+    Main_Thread --> Child_Thread_A
+    Main_Thread --> Child_Thread_B
+    Child_Thread_A --> Child_Thread_C
+```
