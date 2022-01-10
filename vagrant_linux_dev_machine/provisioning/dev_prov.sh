@@ -19,3 +19,6 @@ apt install -y python-is-python3 ipython3 python3-pip python3.8-venv dos2unix
 git config --global user.name "gizi92"
 git config --global user.email "simonzsolt0308@gmail.com"
 mkdir -p /home/vagrant/dev/git
+
+# Linkedin learning - Exploring C libraries
+apt install -y libxml2-dev libjpeg62-dev
