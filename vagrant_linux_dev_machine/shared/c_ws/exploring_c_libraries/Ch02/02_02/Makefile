@@ -1,14 +1,15 @@
 # Template for binary build
 CC = gcc
 CFLAGS = -g -Wall
-LIBFLAGS = -lxml2 -lm
+LIBFLAGS = -lxml2
+# LDFLAGS = -L/usr/lib/gcc/x86_64-linux-gnu
 SRCDIR=./src
 OBJDIR=./obj
 SRCS=$(wildcard $(SRCDIR)/*.c)
 OBJS=$(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
 
 BINDIR = ./bin
-BIN = $(BINDIR)/00_03-xmltest1
+BIN = $(BINDIR)/02_02-xmlversion1
 
 all: $(BINDIR) $(OBJDIR) $(BIN)
 

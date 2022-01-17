@@ -22,3 +22,4 @@ mkdir -p /home/vagrant/dev/git
 
 # Linkedin learning - Exploring C libraries
 apt install -y libxml2-dev libjpeg62-dev
+sudo ln -s /usr/include/libxml2/libxml
