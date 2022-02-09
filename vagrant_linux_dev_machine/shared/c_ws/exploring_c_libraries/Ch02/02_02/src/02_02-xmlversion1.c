@@ -4,7 +4,7 @@
 
 int main()
 {
-	const char filename[] = "02_02-sample1.xml";
+	const char filename[] = "../res/02_02-sample1.xml";
 	/* libxml2 variables */
 	xmlDocPtr doc;
 
