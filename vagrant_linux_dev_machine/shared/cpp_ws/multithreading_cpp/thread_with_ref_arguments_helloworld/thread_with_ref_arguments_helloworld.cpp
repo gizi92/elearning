@@ -1,0 +1,24 @@
+// Example of passing arguments to a thread function by reference
+#include <thread>
+#include <iostream>
+#include <string>
+
+// Thread entry point
+
+void hello(std::string& str){
+    str = "xyz";
+}
+
+int main(){
+
+    std::string str = "abc";
+
+    // Wrap argument in a call to std::ref()
+    std::thread thr(hello, std::ref(str));
+    
+    // Wait for the thread to finish
+    thr.join();
+
+    // Verify that str has been modified
+    std::cout << "str is now " << str << std::endl;
+}
